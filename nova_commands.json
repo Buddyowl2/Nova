@@ -1,158 +1,197 @@
 {
   "engine_metadata": {
-    "version": "2.1",
+    "version": "2.3",
     "aspect_ratio": "16:9",
     "author": "Nova Developer",
-    "last_updated": "2026"
+    "last_updated": "2026",
+    "delimiter": ":"
   },
   "dictionary": {
     "nova:create_graphic_box": {
-      "parameters": ["id", "width", "height", "x", "y", "z", "color"],
-      "requires_nesting": false,
-      "requires_semicolon": false,
-      "description": "Creates a rectangular container with a unique ID.",
-      "era": "1960s - Mainframe Graphics"
+      "parameters": ["id : width : height : x : y : z : color"],
+      "description": "Creates a rectangular container."
     },
     "nova:create_circle": {
-      "parameters": ["id", "radius", "x", "y", "z", "color"],
-      "requires_nesting": false,
-      "requires_semicolon": false,
-      "description": "Renders a circle with a unique ID.",
-      "era": "1970s - Vector Theory"
+      "parameters": ["id : radius : x : y : z : color"],
+      "description": "Renders a circle."
     },
     "nova:create_triangle": {
-      "parameters": ["id", "x", "y", "z", "size", "color"],
-      "requires_nesting": false,
-      "requires_semicolon": false,
-      "description": "Renders a basic equilateral triangle with a unique ID.",
-      "era": "1960s - Polygon Foundations"
+      "parameters": ["id : x : y : z : size : color"],
+      "description": "Renders a basic triangle."
     },
     "nova:create_rounded_rectangle": {
-      "parameters": ["id", "width", "height", "x", "y", "z", "roundness", "color"],
-      "requires_nesting": false,
-      "requires_semicolon": false,
-      "description": "Modern UI box with adjustable corner radius.",
-      "era": "1983 - The Lisa Era"
+      "parameters": ["id : width : height : x : y : z : roundness : color"],
+      "description": "Box with soft corners."
     },
     "nova:create_rounded_triangle": {
-      "parameters": ["id", "x", "y", "z", "roundness", "size", "color"],
-      "requires_nesting": false,
-      "requires_semicolon": false,
-      "description": "Advanced Reuleaux-style triangle with soft edges.",
-      "era": "Modern - Soft UI"
+      "parameters": ["id : x : y : z : roundness : size : color"],
+      "description": "Soft-edge Reuleaux triangle."
     },
     "nova:create_text": {
-      "parameters": ["id", "content", "x", "y", "z"],
-      "requires_nesting": false,
-      "requires_semicolon": false,
-      "description": "Creates a text element with a unique ID.",
-      "era": "1990s - The Document Object Model"
+      "parameters": ["id : content : x : y : z"],
+      "description": "Creates a text element."
     },
     "nova:change_text": {
-      "parameters": ["id", "new_content"],
-      "requires_nesting": false,
-      "requires_semicolon": false,
-      "description": "Finds a named text element and updates its string.",
-      "era": "Modern - Dynamic Web"
+      "parameters": ["id : new_content"],
+      "description": "Updates existing text."
     },
     "nova:move_x": {
-      "parameters": ["id", "amount"],
-      "requires_nesting": false,
-      "requires_semicolon": false,
-      "description": "Moves an element horizontally."
+      "parameters": ["id : amount"]
     },
     "nova:move_y": {
-      "parameters": ["id", "amount"],
-      "requires_nesting": false,
-      "requires_semicolon": false,
-      "description": "Moves an element vertically."
+      "parameters": ["id : amount"]
     },
     "nova:change_color": {
-      "parameters": ["id", "new_color"],
-      "requires_nesting": false,
-      "requires_semicolon": false,
-      "description": "Changes the color of a shape ID."
+      "parameters": ["id : new_color"]
     },
     "nova:key_input": {
       "parameters": ["key_name"],
       "requires_semicolon": true,
-      "requires_nesting": true,
-      "description": "Keyboard interrupt handler. Requires indented block.",
-      "era": "1970s - Hardware Interrupts"
+      "requires_nesting": true
     },
     "nova:if_variable": {
-      "parameters": ["key", "equals_value"],
+      "parameters": ["key : equals_value"],
       "requires_semicolon": true,
-      "requires_nesting": true,
-      "description": "Runs indented code if storage key matches value."
+      "requires_nesting": true
     },
     "nova:else_if": {
-      "parameters": ["key", "equals_value"],
+      "parameters": ["key : equals_value"],
       "requires_semicolon": true,
-      "requires_nesting": true,
-      "description": "Runs if the previous IF failed but this condition is true."
+      "requires_nesting": true
     },
     "nova:else": {
       "parameters": [],
       "requires_semicolon": true,
-      "requires_nesting": true,
-      "description": "Runs if all previous IF/ELSE_IF conditions failed."
+      "requires_nesting": true
     },
     "nova:repeat": {
       "parameters": ["times"],
       "requires_semicolon": true,
-      "requires_nesting": true,
-      "description": "Runs the indented block of code multiple times.",
-      "era": "1950s - Fortran Loops"
+      "requires_nesting": true
     },
     "nova:wait": {
-      "parameters": ["milliseconds"],
-      "requires_semicolon": false,
-      "requires_nesting": false,
-      "description": "Pauses the engine execution.",
-      "era": "1960s - Real-time Computing"
+      "parameters": ["milliseconds"]
     },
     "nova:create_button": {
-      "parameters": ["id", "x", "y", "z", "roundness", "width", "height"],
+      "parameters": ["id : x : y : z : roundness : width : height"],
       "requires_semicolon": true,
       "requires_nesting": true,
-      "description": "Creates a clickable area that runs indented code.",
-      "era": "1984 - Graphical User Interface"
+      "description": "Clickable UI element."
     },
     "nova:save_data": {
-      "parameters": ["key", "value"],
-      "requires_nesting": false,
-      "requires_semicolon": false,
-      "description": "Saves data to the 'Drum' (Local Storage).",
-      "era": "1956 - Magnetic Drum Storage"
+      "parameters": ["key : value"]
     },
     "nova:load_data": {
-      "parameters": ["key"],
-      "requires_nesting": false,
-      "requires_semicolon": false,
-      "description": "Retrieves data from the 'Drum'.",
-      "era": "1956 - Magnetic Drum Storage"
+      "parameters": ["key"]
     },
     "nova:command_log_text": {
-      "parameters": ["message"],
-      "requires_nesting": false,
-      "requires_semicolon": false,
-      "description": "Prints a string to the Nova Console.",
-      "era": "1970s - Teleprinter Logs"
+      "parameters": ["message"]
     },
     "nova:command_log_variable": {
       "parameters": ["variable_name"],
-      "requires_nesting": false,
-      "requires_semicolon": false,
-      "description": "Prints a variable's current value to the console.",
-      "era": "1960s - Telemetry Monitoring"
+      "description": "Prints a single variable value."
     },
     "nova:command_log_adv": {
-      "parameters": ["message", "variable_name"],
-      "requires_nesting": false,
-      "requires_semicolon": false,
-      "description": "Prints combined text and variable data.",
-      "era": "Modern - Debugging Suites"
+      "parameters": ["message : variable_name"],
+      "description": "Prints text followed by a variable."
+    }
+  }
+}{
+  "engine_metadata": {
+    "version": "2.3",
+    "aspect_ratio": "16:9",
+    "author": "Nova Developer",
+    "last_updated": "2026",
+    "delimiter": ":"
+  },
+  "dictionary": {
+    "nova:create_graphic_box": {
+      "parameters": ["id : width : height : x : y : z : color"],
+      "description": "Creates a rectangular container."
+    },
+    "nova:create_circle": {
+      "parameters": ["id : radius : x : y : z : color"],
+      "description": "Renders a circle."
+    },
+    "nova:create_triangle": {
+      "parameters": ["id : x : y : z : size : color"],
+      "description": "Renders a basic triangle."
+    },
+    "nova:create_rounded_rectangle": {
+      "parameters": ["id : width : height : x : y : z : roundness : color"],
+      "description": "Box with soft corners."
+    },
+    "nova:create_rounded_triangle": {
+      "parameters": ["id : x : y : z : roundness : size : color"],
+      "description": "Soft-edge Reuleaux triangle."
+    },
+    "nova:create_text": {
+      "parameters": ["id : content : x : y : z"],
+      "description": "Creates a text element."
+    },
+    "nova:change_text": {
+      "parameters": ["id : new_content"],
+      "description": "Updates existing text."
+    },
+    "nova:move_x": {
+      "parameters": ["id : amount"]
+    },
+    "nova:move_y": {
+      "parameters": ["id : amount"]
+    },
+    "nova:change_color": {
+      "parameters": ["id : new_color"]
+    },
+    "nova:key_input": {
+      "parameters": ["key_name"],
+      "requires_semicolon": true,
+      "requires_nesting": true
+    },
+    "nova:if_variable": {
+      "parameters": ["key : equals_value"],
+      "requires_semicolon": true,
+      "requires_nesting": true
+    },
+    "nova:else_if": {
+      "parameters": ["key : equals_value"],
+      "requires_semicolon": true,
+      "requires_nesting": true
+    },
+    "nova:else": {
+      "parameters": [],
+      "requires_semicolon": true,
+      "requires_nesting": true
+    },
+    "nova:repeat": {
+      "parameters": ["times"],
+      "requires_semicolon": true,
+      "requires_nesting": true
+    },
+    "nova:wait": {
+      "parameters": ["milliseconds"]
+    },
+    "nova:create_button": {
+      "parameters": ["id : x : y : z : roundness : width : height"],
+      "requires_semicolon": true,
+      "requires_nesting": true,
+      "description": "Clickable UI element."
+    },
+    "nova:save_data": {
+      "parameters": ["key : value"]
+    },
+    "nova:load_data": {
+      "parameters": ["key"]
+    },
+    "nova:command_log_text": {
+      "parameters": ["message"]
+    },
+    "nova:command_log_variable": {
+      "parameters": ["variable_name"],
+      "description": "Prints a single variable value."
+    },
+    "nova:command_log_adv": {
+      "parameters": ["message : variable_name"],
+      "description": "Prints text followed by a variable."
     }
   }
 }

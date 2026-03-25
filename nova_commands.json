@@ -1,6 +1,6 @@
 {
   "engine_metadata": {
-    "version": "1.8",
+    "version": "2.1",
     "aspect_ratio": "16:9",
     "author": "Nova Developer",
     "last_updated": "2026"
@@ -10,37 +10,50 @@
       "parameters": ["id", "width", "height", "x", "y", "z", "color"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Creates a rectangular container with a unique ID."
+      "description": "Creates a rectangular container with a unique ID.",
+      "era": "1960s - Mainframe Graphics"
     },
     "nova:create_circle": {
       "parameters": ["id", "radius", "x", "y", "z", "color"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Renders a circle with a unique ID."
+      "description": "Renders a circle with a unique ID.",
+      "era": "1970s - Vector Theory"
     },
     "nova:create_triangle": {
       "parameters": ["id", "x", "y", "z", "size", "color"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Renders a triangle with a unique ID."
+      "description": "Renders a basic equilateral triangle with a unique ID.",
+      "era": "1960s - Polygon Foundations"
     },
     "nova:create_rounded_rectangle": {
       "parameters": ["id", "width", "height", "x", "y", "z", "roundness", "color"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Modern UI box with adjustable corner radius."
+      "description": "Modern UI box with adjustable corner radius.",
+      "era": "1983 - The Lisa Era"
+    },
+    "nova:create_rounded_triangle": {
+      "parameters": ["id", "x", "y", "z", "roundness", "size", "color"],
+      "requires_nesting": false,
+      "requires_semicolon": false,
+      "description": "Advanced Reuleaux-style triangle with soft edges.",
+      "era": "Modern - Soft UI"
     },
     "nova:create_text": {
       "parameters": ["id", "content", "x", "y", "z"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Creates text at specific coordinates."
+      "description": "Creates a text element with a unique ID.",
+      "era": "1990s - The Document Object Model"
     },
     "nova:change_text": {
       "parameters": ["id", "new_content"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Updates the string of a named text element."
+      "description": "Finds a named text element and updates its string.",
+      "era": "Modern - Dynamic Web"
     },
     "nova:move_x": {
       "parameters": ["id", "amount"],
@@ -64,37 +77,82 @@
       "parameters": ["key_name"],
       "requires_semicolon": true,
       "requires_nesting": true,
-      "description": "Keyboard interrupt handler."
+      "description": "Keyboard interrupt handler. Requires indented block.",
+      "era": "1970s - Hardware Interrupts"
+    },
+    "nova:if_variable": {
+      "parameters": ["key", "equals_value"],
+      "requires_semicolon": true,
+      "requires_nesting": true,
+      "description": "Runs indented code if storage key matches value."
+    },
+    "nova:else_if": {
+      "parameters": ["key", "equals_value"],
+      "requires_semicolon": true,
+      "requires_nesting": true,
+      "description": "Runs if the previous IF failed but this condition is true."
+    },
+    "nova:else": {
+      "parameters": [],
+      "requires_semicolon": true,
+      "requires_nesting": true,
+      "description": "Runs if all previous IF/ELSE_IF conditions failed."
     },
     "nova:repeat": {
       "parameters": ["times"],
       "requires_semicolon": true,
       "requires_nesting": true,
-      "description": "Runs indented code multiple times."
+      "description": "Runs the indented block of code multiple times.",
+      "era": "1950s - Fortran Loops"
     },
     "nova:wait": {
       "parameters": ["milliseconds"],
       "requires_semicolon": false,
       "requires_nesting": false,
-      "description": "Pauses the engine."
+      "description": "Pauses the engine execution.",
+      "era": "1960s - Real-time Computing"
+    },
+    "nova:create_button": {
+      "parameters": ["id", "x", "y", "z", "roundness", "width", "height"],
+      "requires_semicolon": true,
+      "requires_nesting": true,
+      "description": "Creates a clickable area that runs indented code.",
+      "era": "1984 - Graphical User Interface"
     },
     "nova:save_data": {
       "parameters": ["key", "value"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Saves data to the Drum (LocalStorage)."
+      "description": "Saves data to the 'Drum' (Local Storage).",
+      "era": "1956 - Magnetic Drum Storage"
     },
     "nova:load_data": {
       "parameters": ["key"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Retrieves data from the Drum."
+      "description": "Retrieves data from the 'Drum'.",
+      "era": "1956 - Magnetic Drum Storage"
     },
     "nova:command_log_text": {
       "parameters": ["message"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Prints to the console."
+      "description": "Prints a string to the Nova Console.",
+      "era": "1970s - Teleprinter Logs"
+    },
+    "nova:command_log_variable": {
+      "parameters": ["variable_name"],
+      "requires_nesting": false,
+      "requires_semicolon": false,
+      "description": "Prints a variable's current value to the console.",
+      "era": "1960s - Telemetry Monitoring"
+    },
+    "nova:command_log_adv": {
+      "parameters": ["message", "variable_name"],
+      "requires_nesting": false,
+      "requires_semicolon": false,
+      "description": "Prints combined text and variable data.",
+      "era": "Modern - Debugging Suites"
     }
   }
 }

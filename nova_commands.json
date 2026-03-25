@@ -7,39 +7,34 @@
   },
   "dictionary": {
     "nova:create_graphic_box": {
-      "parameters": ["width", "height", "x", "y", "z"],
+      "parameters": ["id", "width", "height", "x", "y", "z", "color"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Creates a rectangular container at specific coordinates.",
-      "era": "1960s - Mainframe Graphics"
+      "description": "Creates a rectangular container with a unique ID."
     },
     "nova:create_circle": {
-      "parameters": ["radius", "x", "y", "z"],
+      "parameters": ["id", "radius", "x", "y", "z", "color"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Renders a circle. Used for UI rounding and dots.",
-      "era": "1970s - Vector Theory"
-    },
-    "nova:create_rounded_rectangle": {
-      "parameters": ["x", "y", "z", "roundness", "width", "height"],
-      "requires_nesting": false,
-      "requires_semicolon": false,
-      "description": "Modern UI box with adjustable corner radius.",
-      "era": "1983 - The Lisa Era"
+      "description": "Renders a circle with a unique ID."
     },
     "nova:create_triangle": {
-      "parameters": ["x", "y", "z", "size"],
+      "parameters": ["id", "x", "y", "z", "size", "color"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Renders a basic equilateral triangle.",
-      "era": "1960s - Polygon Foundations"
+      "description": "Renders a triangle with a unique ID."
+    },
+    "nova:create_rounded_rectangle": {
+      "parameters": ["id", "width", "height", "x", "y", "z", "roundness", "color"],
+      "requires_nesting": false,
+      "requires_semicolon": false,
+      "description": "Modern UI box with adjustable corner radius."
     },
     "nova:create_text": {
       "parameters": ["id", "content", "x", "y", "z"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Creates a text element at specific coordinates.",
-      "era": "1990s - The DOM"
+      "description": "Creates text at specific coordinates."
     },
     "nova:change_text": {
       "parameters": ["id", "new_content"],
@@ -48,22 +43,28 @@
       "description": "Updates the string of a named text element."
     },
     "nova:move_x": {
-      "parameters": ["id", "pixel_amount"],
+      "parameters": ["id", "amount"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Moves an element horizontally (relative)."
+      "description": "Moves an element horizontally."
     },
     "nova:move_y": {
-      "parameters": ["id", "pixel_amount"],
+      "parameters": ["id", "amount"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Moves an element vertically (relative)."
+      "description": "Moves an element vertically."
+    },
+    "nova:change_color": {
+      "parameters": ["id", "new_color"],
+      "requires_nesting": false,
+      "requires_semicolon": false,
+      "description": "Changes the color of a shape ID."
     },
     "nova:key_input": {
       "parameters": ["key_name"],
       "requires_semicolon": true,
       "requires_nesting": true,
-      "description": "Interrupt handler for keyboard input."
+      "description": "Keyboard interrupt handler."
     },
     "nova:repeat": {
       "parameters": ["times"],
@@ -75,31 +76,25 @@
       "parameters": ["milliseconds"],
       "requires_semicolon": false,
       "requires_nesting": false,
-      "description": "Pauses the engine execution."
-    },
-    "nova:create_button": {
-      "parameters": ["x", "y", "z", "roundness", "width", "height"],
-      "requires_semicolon": true,
-      "requires_nesting": true,
-      "description": "Creates a clickable area that runs indented code."
+      "description": "Pauses the engine."
     },
     "nova:save_data": {
       "parameters": ["key", "value"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Saves data to the browser's Drum storage."
+      "description": "Saves data to the Drum (LocalStorage)."
     },
     "nova:load_data": {
       "parameters": ["key"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Retrieves data from the Drum storage."
+      "description": "Retrieves data from the Drum."
     },
     "nova:command_log_text": {
       "parameters": ["message"],
       "requires_nesting": false,
       "requires_semicolon": false,
-      "description": "Prints a string to the Nova Console."
+      "description": "Prints to the console."
     }
   }
 }

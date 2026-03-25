@@ -1,0 +1,96 @@
+{
+  "engine_metadata": {
+    "version": "1.2",
+    "aspect_ratio": "16:9",
+    "author": "Nova Developer",
+    "last_updated": "2026"
+  },
+  "dictionary": {
+    "nova:create_graphic_box": {
+      "parameters": ["width", "height", "x", "y", "z"],
+      "requires_nesting": false,
+      "description": "Creates a rectangular container at specific coordinates.",
+      "era": "1960s - Mainframe Graphics"
+    },
+    "nova:create_circle": {
+      "parameters": ["radius", "x", "y", "z"],
+      "requires_nesting": false,
+      "description": "Renders a circle. Used for UI rounding and dots.",
+      "era": "1970s - Vector Theory"
+    },
+    "nova:create_rounded_rectangle": {
+      "parameters": ["x", "y", "z", "roundness", "width", "height"],
+      "requires_nesting": false,
+      "description": "Modern UI box with adjustable corner radius.",
+      "era": "1983 - The Lisa Era"
+    },
+    "nova:create_triangle": {
+      "parameters": ["x", "y", "z", "size"],
+      "requires_nesting": false,
+      "description": "Renders a basic equilateral triangle.",
+      "era": "1960s - Polygon Foundations"
+    },
+    "nova:create_rounded_triangle": {
+      "parameters": ["x", "y", "z", "roundness", "size"],
+      "requires_nesting": false,
+      "description": "Advanced Reuleaux-style triangle with soft edges.",
+      "era": "Modern - Soft UI"
+    },
+    "nova:create_text": {
+      "parameters": ["id", "content"],
+      "requires_nesting": false,
+      "description": "Creates a text element with a unique ID for later manipulation.",
+      "era": "1990s - The Document Object Model"
+    },
+    "nova:change_text": {
+      "parameters": ["id", "new_content"],
+      "requires_nesting": false,
+      "description": "Finds a named text element and updates its string.",
+      "era": "Modern - Dynamic Web"
+    },
+    "nova:key_input": {
+      "parameters": ["key_name"],
+      "requires_semicolon": true,
+      "requires_nesting": true,
+      "description": "The Gatekeeper command for keyboard interrupts. Requires indented block.",
+      "era": "1970s - Hardware Interrupts"
+    },
+    "nova:create_button": {
+      "parameters": ["x", "y", "z", "roundness", "width", "height"],
+      "requires_semicolon": true,
+      "requires_nesting": true,
+      "description": "Creates a clickable area that runs indented code.",
+      "era": "1984 - Graphical User Interface"
+    },
+    "nova:save_data": {
+      "parameters": ["key", "value"],
+      "requires_nesting": false,
+      "description": "Saves data to the 'Drum' (Local Storage).",
+      "era": "1956 - Magnetic Drum Storage"
+    },
+    "nova:load_data": {
+      "parameters": ["key"],
+      "requires_nesting": false,
+      "description": "Retrieves data from the 'Drum'.",
+      "era": "1956 - Magnetic Drum Storage"
+    },
+    "nova:command_log_text": {
+      "parameters": ["message"],
+      "requires_nesting": false,
+      "description": "Prints a string to the Nova Console.",
+      "era": "1970s - Teleprinter Logs"
+    },
+    "nova:command_log_variable": {
+      "parameters": ["variable_name"],
+      "requires_nesting": false,
+      "description": "Prints a variable's current value to the console.",
+      "era": "1960s - Telemetry Monitoring"
+    },
+    "nova:command_log_adv": {
+      "parameters": ["message", "variable_name"],
+      "requires_nesting": false,
+      "description": "Prints combined text and variable data.",
+      "era": "Modern - Debugging Suites"
+    }
+  }
+}

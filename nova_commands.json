@@ -23,6 +23,14 @@
     "nova:load_data": { "parameters": ["key"] },
     "nova:command_log_text": { "parameters": ["message"] },
     "nova:command_log_variable": { "parameters": ["variable_name"] },
-    "nova:command_log_adv": { "parameters": ["message : variable_name"] }
+    "nova:command_log_adv": { "parameters": ["message : variable_name"] },
+    "nova:math_sin": { "parameters": ["variable : angle"] },
+    "nova:math_cos": { "parameters": ["variable : angle"] },
+    "nova:math_random": { "parameters": ["variable : min : max"] },
+    "nova:math_add": { "parameters": ["variable : value"] },
+    "nova:phys_gravity": { "parameters": ["strength"] },
+    "nova:phys_velocity": { "parameters": ["id : x_vel : y_vel"] },
+    "nova:phys_friction": { "parameters": ["id : amount"] },
+    "nova:phys_collision": { "parameters": ["id_a : id_b : response_type"] }
   }
 }

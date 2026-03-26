@@ -12,6 +12,8 @@
     "nova:move_x": { "parameters": ["id : amount"] },
     "nova:move_y": { "parameters": ["id : amount"] },
     "nova:change_color": { "parameters": ["id : new_color"] },
+    "nova:set_opacity": { "parameters": ["id : value"] },
+    "nova:set_rotation": { "parameters": ["id : degrees"] },
     "nova:key_input": { "parameters": ["key_name"] },
     "nova:if_variable": { "parameters": ["key : equals_value"] },
     "nova:else_if": { "parameters": ["key : equals_value"] },
@@ -28,9 +30,12 @@
     "nova:math_cos": { "parameters": ["variable : angle"] },
     "nova:math_random": { "parameters": ["variable : min : max"] },
     "nova:math_add": { "parameters": ["variable : value"] },
+    "nova:math_multiply": { "parameters": ["variable : value"] },
+    "nova:math_divide": { "parameters": ["variable : value"] },
     "nova:phys_gravity": { "parameters": ["strength"] },
     "nova:phys_velocity": { "parameters": ["id : x_vel : y_vel"] },
     "nova:phys_friction": { "parameters": ["id : amount"] },
-    "nova:phys_collision": { "parameters": ["id_a : id_b : response_type"] }
+    "nova:phys_collision": { "parameters": ["id_a : id_b : response_type"] },
+    "nova:system_reset": { "parameters": [] }
   }
 }

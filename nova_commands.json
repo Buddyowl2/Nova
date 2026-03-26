@@ -1,197 +1,27 @@
 {
-  "engine_metadata": {
-    "version": "2.3",
-    "aspect_ratio": "16:9",
-    "author": "Nova Developer",
-    "last_updated": "2026",
-    "delimiter": ":"
-  },
   "dictionary": {
-    "nova:create_graphic_box": {
-      "parameters": ["id : width : height : x : y : z : color"],
-      "description": "Creates a rectangular container."
-    },
-    "nova:create_circle": {
-      "parameters": ["id : radius : x : y : z : color"],
-      "description": "Renders a circle."
-    },
-    "nova:create_triangle": {
-      "parameters": ["id : x : y : z : size : color"],
-      "description": "Renders a basic triangle."
-    },
-    "nova:create_rounded_rectangle": {
-      "parameters": ["id : width : height : x : y : z : roundness : color"],
-      "description": "Box with soft corners."
-    },
-    "nova:create_rounded_triangle": {
-      "parameters": ["id : x : y : z : roundness : size : color"],
-      "description": "Soft-edge Reuleaux triangle."
-    },
-    "nova:create_text": {
-      "parameters": ["id : content : x : y : z"],
-      "description": "Creates a text element."
-    },
-    "nova:change_text": {
-      "parameters": ["id : new_content"],
-      "description": "Updates existing text."
-    },
-    "nova:move_x": {
-      "parameters": ["id : amount"]
-    },
-    "nova:move_y": {
-      "parameters": ["id : amount"]
-    },
-    "nova:change_color": {
-      "parameters": ["id : new_color"]
-    },
-    "nova:key_input": {
-      "parameters": ["key_name"],
-      "requires_semicolon": true,
-      "requires_nesting": true
-    },
-    "nova:if_variable": {
-      "parameters": ["key : equals_value"],
-      "requires_semicolon": true,
-      "requires_nesting": true
-    },
-    "nova:else_if": {
-      "parameters": ["key : equals_value"],
-      "requires_semicolon": true,
-      "requires_nesting": true
-    },
-    "nova:else": {
-      "parameters": [],
-      "requires_semicolon": true,
-      "requires_nesting": true
-    },
-    "nova:repeat": {
-      "parameters": ["times"],
-      "requires_semicolon": true,
-      "requires_nesting": true
-    },
-    "nova:wait": {
-      "parameters": ["milliseconds"]
-    },
-    "nova:create_button": {
-      "parameters": ["id : x : y : z : roundness : width : height"],
-      "requires_semicolon": true,
-      "requires_nesting": true,
-      "description": "Clickable UI element."
-    },
-    "nova:save_data": {
-      "parameters": ["key : value"]
-    },
-    "nova:load_data": {
-      "parameters": ["key"]
-    },
-    "nova:command_log_text": {
-      "parameters": ["message"]
-    },
-    "nova:command_log_variable": {
-      "parameters": ["variable_name"],
-      "description": "Prints a single variable value."
-    },
-    "nova:command_log_adv": {
-      "parameters": ["message : variable_name"],
-      "description": "Prints text followed by a variable."
-    }
-  }
-}{
-  "engine_metadata": {
-    "version": "2.3",
-    "aspect_ratio": "16:9",
-    "author": "Nova Developer",
-    "last_updated": "2026",
-    "delimiter": ":"
-  },
-  "dictionary": {
-    "nova:create_graphic_box": {
-      "parameters": ["id : width : height : x : y : z : color"],
-      "description": "Creates a rectangular container."
-    },
-    "nova:create_circle": {
-      "parameters": ["id : radius : x : y : z : color"],
-      "description": "Renders a circle."
-    },
-    "nova:create_triangle": {
-      "parameters": ["id : x : y : z : size : color"],
-      "description": "Renders a basic triangle."
-    },
-    "nova:create_rounded_rectangle": {
-      "parameters": ["id : width : height : x : y : z : roundness : color"],
-      "description": "Box with soft corners."
-    },
-    "nova:create_rounded_triangle": {
-      "parameters": ["id : x : y : z : roundness : size : color"],
-      "description": "Soft-edge Reuleaux triangle."
-    },
-    "nova:create_text": {
-      "parameters": ["id : content : x : y : z"],
-      "description": "Creates a text element."
-    },
-    "nova:change_text": {
-      "parameters": ["id : new_content"],
-      "description": "Updates existing text."
-    },
-    "nova:move_x": {
-      "parameters": ["id : amount"]
-    },
-    "nova:move_y": {
-      "parameters": ["id : amount"]
-    },
-    "nova:change_color": {
-      "parameters": ["id : new_color"]
-    },
-    "nova:key_input": {
-      "parameters": ["key_name"],
-      "requires_semicolon": true,
-      "requires_nesting": true
-    },
-    "nova:if_variable": {
-      "parameters": ["key : equals_value"],
-      "requires_semicolon": true,
-      "requires_nesting": true
-    },
-    "nova:else_if": {
-      "parameters": ["key : equals_value"],
-      "requires_semicolon": true,
-      "requires_nesting": true
-    },
-    "nova:else": {
-      "parameters": [],
-      "requires_semicolon": true,
-      "requires_nesting": true
-    },
-    "nova:repeat": {
-      "parameters": ["times"],
-      "requires_semicolon": true,
-      "requires_nesting": true
-    },
-    "nova:wait": {
-      "parameters": ["milliseconds"]
-    },
-    "nova:create_button": {
-      "parameters": ["id : x : y : z : roundness : width : height"],
-      "requires_semicolon": true,
-      "requires_nesting": true,
-      "description": "Clickable UI element."
-    },
-    "nova:save_data": {
-      "parameters": ["key : value"]
-    },
-    "nova:load_data": {
-      "parameters": ["key"]
-    },
-    "nova:command_log_text": {
-      "parameters": ["message"]
-    },
-    "nova:command_log_variable": {
-      "parameters": ["variable_name"],
-      "description": "Prints a single variable value."
-    },
-    "nova:command_log_adv": {
-      "parameters": ["message : variable_name"],
-      "description": "Prints text followed by a variable."
-    }
+    "nova:background_clr": { "parameters": ["color"] },
+    "nova:create_graphic_box": { "parameters": ["id : width : height : x : y : z : color"] },
+    "nova:create_circle": { "parameters": ["id : radius : x : y : z : color"] },
+    "nova:create_triangle": { "parameters": ["id : x : y : z : size : color"] },
+    "nova:create_rounded_rectangle": { "parameters": ["id : width : height : x : y : z : roundness : color"] },
+    "nova:create_rounded_triangle": { "parameters": ["id : x : y : z : roundness : size : color"] },
+    "nova:create_text": { "parameters": ["id : content : x : y : z"] },
+    "nova:change_text": { "parameters": ["id : new_content"] },
+    "nova:move_x": { "parameters": ["id : amount"] },
+    "nova:move_y": { "parameters": ["id : amount"] },
+    "nova:change_color": { "parameters": ["id : new_color"] },
+    "nova:key_input": { "parameters": ["key_name"] },
+    "nova:if_variable": { "parameters": ["key : equals_value"] },
+    "nova:else_if": { "parameters": ["key : equals_value"] },
+    "nova:else": { "parameters": [] },
+    "nova:repeat": { "parameters": ["times"] },
+    "nova:wait": { "parameters": ["milliseconds"] },
+    "nova:create_button": { "parameters": ["id : x : y : z : roundness : width : height"] },
+    "nova:save_data": { "parameters": ["key : value"] },
+    "nova:load_data": { "parameters": ["key"] },
+    "nova:command_log_text": { "parameters": ["message"] },
+    "nova:command_log_variable": { "parameters": ["variable_name"] },
+    "nova:command_log_adv": { "parameters": ["message : variable_name"] }
   }
 }
